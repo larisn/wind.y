@@ -1,0 +1,107 @@
+
+@import 
+"../abstracts/variables", 
+"../abstracts/mixins", 
+"../abstracts/reset", 
+"../pages/forecast", 
+"../pages/header", 
+"../pages/current-weather", 
+"../pages/hourly-forecast", 
+"../pages/highlights", 
+"/assets/style/style.css"; 
+ 
+
+#s-error-content {
+    .container {
+        padding: 0 20px 0px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100svh; /* for mobile browser */
+        background-color: $color-main;
+        @include align-center;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 8;
+        span {
+            margin-top: 100px;
+        }
+        div {
+            @include responsive-desktop {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            img {
+                width: 230px;
+                margin: 30px auto 20px auto;
+                @include responsive-small-phone {
+                    width: 200px;
+                    margin-top: 0;
+                }
+                @include responsive-tablet {
+                    width: 400px;
+                    margin-top: 50px;
+                }
+                @include responsive-desktop {
+                    width: 300px;
+                }
+                @include responsive-desktop2 {
+                    width: 400px;
+                }
+            }
+            h2 {
+                text-align: center;
+                color: $color-white1;
+                font-size: 5rem;
+                margin-bottom: 10px;
+                @include responsive-tablet {
+                    font-size: 7rem;
+                }
+            }
+            h3 {
+                font: 600 2.2rem 'Nunito Sans';
+                text-align: center;
+                color: $color-white1;
+                @include responsive-tablet {
+                    font-size: 3rem;
+                }
+            }
+            p {
+                text-align: justify;
+                font-size: 1.5rem;
+                font-weight: 500;
+                line-height: 27px;
+                padding: 20px 6px 20px 6px;
+                color: $color-white1;
+                @include responsive-small-phone {
+                   display: none;
+                }
+                @include responsive-tablet {
+                    font-size: 2rem;
+                    line-height: 35px;
+                }
+            }
+            span {
+                background-color: #a09fe7;
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $color-main;
+                padding: 8px 12px 8px 12px;
+                border-radius: 50px;
+                &:hover {
+                    background-color: #8d8ccd;
+                }
+                @include responsive-small-phone {
+                    position: relative;
+                    top: 20px;
+                    left: 53px;
+                }
+                @include responsive-tablet {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

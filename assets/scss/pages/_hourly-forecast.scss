@@ -1,0 +1,68 @@
+
+#s-hourly-forecast {
+    .container {
+        h2 {
+            font-weight: 600;
+            font-size: 2rem;
+            margin: 10px 0 12px 18px;
+            @include responsive-tablet {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.hourly-forecast {
+    padding-right: 17px;
+    @include responsive-tablet {
+        padding-right: 26px;
+    }
+    @include responsive-desktop {
+        padding-right: 25px;
+    }
+    @include responsive-desktop2 {
+        padding-right: 22px;
+    }
+    ul {
+        margin-block-end: 16px;
+    }
+    li {
+        background-color: $bg-secondary;
+        border-radius: 16px;
+        min-width: 110px;
+        flex:  1 1 100%;
+        div {
+            text-align: center;
+            padding: 16px;
+        }
+        img {
+            margin-inline: auto;
+            margin-block: 12px;
+        }
+    }
+    p {
+        font: 400 1.6rem 'Nunito Sans';
+    }
+    div {
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.slider-list {
+    display: flex;
+    gap: 12px;
+    &::before, &::after {
+        content: "";
+        margin-left: 4px;
+        @include responsive-tablet {
+            content: none;
+            margin-left: 0;
+        }
+    }
+    @include responsive-desktop {
+        gap: 16.5px;
+    }
+}

@@ -1,0 +1,323 @@
+
+header {
+    .container {  
+        @include container;
+        @include flexbox-between;
+        padding: 20px 25px 15px 25px;
+        .logo {
+            width: 150px;
+            @include responsive-desktop {
+                width: 180px;
+                cursor: pointer;
+            }
+        }
+        @include responsive-desktop {
+            align-items: start;
+            padding: 30px 60px;
+        }
+    }
+    @include responsive-desktop {
+        padding-top: 6px;
+        margin-left: 30px;
+        position: relative;
+        height: 120px;
+        z-index: 4;
+    }
+}
+
+@keyframes ripple {
+    0% { clip-path: circle(0% at 50% 50%); }
+    100% { clip-path: circle(100% at 50% 50%); }
+}
+
+.arrow-close {
+    &:hover {
+        &::before {
+            background-color: #6e728c18;
+        }
+    }
+    &:is(:focus, :focus-visible) {
+        box-shadow: none;
+        &::before {
+            animation: ripple 500ms ease forwards;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        clip-path: circle(100% at 50% 50%);
+        transition: $transition-short;
+    }
+}
+
+.has-state {
+    @include responsive-desktop {
+        display: none;
+    }
+}
+
+.header-actions {
+    @include align-center;
+    gap: 15px;
+    button {
+        span {
+            @include align-center;
+            background-color: $bg-secondary;
+            width: 21px;
+            height: 21px;
+            box-sizing: content-box;
+            border-radius: 50%;
+            padding: 13px;
+            transform: translateY(-2px);
+            &:hover {
+                box-shadow: $shadow1;
+            }
+            &:is(:focus, :focus-visible) {
+                box-shadow: none;
+                &::before {
+                    animation: ripple 500ms ease forwards;
+                }
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                clip-path: circle(100% at 50% 50%);
+                inset: 0px;
+                border-radius: inherit;
+                transition: $transition-short;
+            }
+        }
+    }
+    a {
+        @include align-center;
+        background-color: #a09fe7;
+        height: 46px;
+        line-height: 48px;
+        max-width: max-content;
+        padding: 12px;
+        border-radius: 30px;
+        transform: translateY(-2px);
+        &:hover {
+            background-color: #8d8ccd;
+        }
+        &[disabled] {
+            background-color: #3E3D40;
+            color: #7B7980;
+            cursor: not-allowed;
+            &::before {
+                display: none;
+            }
+        }
+        span {
+            display: none;
+            @include responsive-tablet {
+                display: inline-block;
+                color: $color-secondary;
+                font: 600 1.5rem 'Nunito Sans';
+                width: 100%;
+                white-space: nowrap;
+                margin-left: 10px;
+            }
+        }  
+        @include responsive-tablet {
+            background-color: #a09fe7;
+            padding: 20px;
+        }
+        @include responsive-desktop {
+            padding: 20px;
+            height: 48px;
+        }
+        @include responsive-tablet {
+            &:hover {
+                background-color: #8d8ccd;
+                &[disabled] {
+                    background-color: #3E3D40;
+                }
+            }
+        }
+    }
+}
+
+.search-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100svh; // for mobile browser
+    background-color: $color-main;
+    color: $color-white1;
+    clip-path: circle(4% at calc(100% - 102px) 5%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+    transition: clip-path 500ms ease;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        clip-path: circle(130% at 73% 5%);
+        @include responsive-desktop {
+            all: unset;
+            display: block;
+            position: relative;
+            width: 500px;
+            animation: 0s ease 0s 1 normal none running none;
+        }
+    }
+    @include responsive-tablet {
+        clip-path: circle(3% at calc(100% - 273px) 6%);
+    }
+    @include responsive-desktop {
+        all: unset;
+        display: block;
+        position: relative;
+        width: 500px;
+        animation: 0s ease 0s 1 normal none running none;
+        &:is(:hover, :has(ul):hover) {
+            filter: drop-shadow($shadow1);
+        }
+        &:is(:focus-within, :has(ul):focus-within) {
+            filter: drop-shadow($shadow2);
+        }
+    }
+    div:nth-child(1) { // loading
+        span:nth-child(2) {
+            display: none;
+            @include responsive-desktop {
+                display: block;
+                width: 18px;
+                position: absolute;
+                top: 50%;
+                left: 28px;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+            }
+        }
+        position: relative;
+        border-block-end: 1px solid #f0f0f03b;
+        @include responsive-desktop {
+            border-block-end: none;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 16px;
+            width: 24px;
+            height: 24px;
+            border: 3px solid $blue-color4;
+            border-block-start-color: transparent;
+            border-radius: 50%;
+            animation: loading 600ms linear infinite;
+            display: none;
+        }
+        &:has(.searching)::before {
+            display: block;
+        }
+        @keyframes loading {
+            0% { transform: translateY(-50%) rotate(0);}
+            100% { transform: translateY(-50%) rotate(1turn);}
+        }
+    }
+    button {
+        position: absolute;
+        top: 50%;
+        left: 28px;
+        transform: translate(-50%, -45%);
+        background-color: transparent;
+        display: inline-flex;
+        width: 17px;
+        height: 17px;
+        box-sizing: content-box;
+        border-radius: 50%;
+        padding: 12px;
+        img {
+            transform: translateY(1px);
+        }
+        @include responsive-desktop {
+            display: none;
+        }
+    }
+    ul {
+        padding-block: 8px 16px;
+        @include responsive-desktop {
+            background-color: $bg-secondary;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            max-height: 360px;
+            border-radius: 0 0 30px 30px;
+            border-block-start: 1px solid #f0f0f03b;
+            overflow-y: auto; // for firefox
+            overflow-y: overlay;
+            &:empty {
+                min-height: 120px;
+            }
+            &::-webkit-scrollbar-button {
+                height: 20px;
+            }
+        }
+    }
+    li {
+        @include align-center;
+        justify-content: start;
+        position: relative;
+        gap: 16px;
+        padding: 16px 20px;
+        p {
+            font: 500 1.3rem 'Nunito Sans';
+        }
+        & :is(p:nth-child(2)) {
+            color: $color-white1-3;
+        }
+        a {
+            position: absolute;
+            inset: 0;
+        }
+        @include responsive-desktop {
+            position: relative;
+            height: 56px;
+            cursor: pointer;
+        }
+        &:hover {
+            background-color: #6e728c18;
+        }
+    }
+    .search-result, &:not(:focus-within) .search-result {
+        @include responsive-desktop {
+            display: none;
+        }
+    }
+    &:focus-within .search-result.active {
+        display: block;
+    }
+    &:has(.search-result.active):focus-within .search-field {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.search-field { //input search
+    height: 70px;
+    padding-inline: 53px 20px;
+    outline: none;
+    &::placeholder {
+        color: $color-white1-2;
+        font: 500 1.6rem 'Nunito Sans';
+        @include responsive-desktop {
+            padding-left: 5px;
+        }
+    }
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+    @include responsive-desktop {
+        background-color: $bg-secondary;
+        height: 56px;
+        line-height: 80px;
+        border-radius: 30px;
+    }
+}

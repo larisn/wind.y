@@ -1,0 +1,62 @@
+
+// media queries
+  
+@mixin responsive-small-phone {
+  @media screen and (min-width: 0px) and (max-width: 370px){
+    @content;
+  }
+}
+
+@mixin responsive-tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin responsive-desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin responsive-desktop2 {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+
+// position elements
+
+@mixin flexbox-between() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+@mixin flexbox-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin align-center() {
+  display: flex;
+  align-items: center;
+}
+  
+@mixin container() {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 16px;
+  @include responsive-tablet {
+    padding: 24px;
+  }
+  @include responsive-desktop2 {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px
+  }
+}
+

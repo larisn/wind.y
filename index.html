@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <!-- meta tags --->
+   <meta charset="UTF-8">
+   <meta name="author" content="Larissa Santos">
+   <meta name="description" content="wind.y">
+   <meta name="keywords" content="sites, web, larisn,  desenvolvimento, frontend, larissa santos, ui designer, programadora, front-end, website, app, wind.y, weather, clima, api, weather app">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="theme-color" content="#222436">
+   <meta name="copyright" content="larisn 2023">
+   <meta http-equiv="content-language" content="en">
+   <!-- <meta property="og:image" content="https://larisn.github.io/assets/img/Preview.png"> -->
+   <meta property="og:title" content="wind.y">
+   <meta property="og:description" content="wind.y">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- google links --->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="shortcut icon" href="/assets/img/icons/cloud 1.svg" type="image/x-icon">
+
+   <!-- style --->
+   <link rel="stylesheet" href="assets/style/style.css">
+   <title>wind.y</title> 
+</head>
+
+<body>
+   <header id="header">
+      <div class="container">
+         <img class="logo" src="assets/img/logo.svg" alt="Logo wind.y">
+
+         <div class="search-view" data-search-view>
+            <div>
+               <input type="search" name="search" placeholder="Search city" autocomplete="off" class="search-field" data-search-field>
+
+               <span class="m-icon1">search</span>
+
+               <button class="arrow-close" aria-label="close search" data-search-toggler>
+                  <img src="assets/img/icons/arrow.svg" alt="Arrow">
+               </button>
+            </div>
+
+            <div class="search-result" data-search-result>
+               <ul class="view-list" data-search-list></ul>
+            </div>
+         </div>
+            
+         <div class="header-actions">
+            <button class="has-state" aria-label="open search" data-search-toggler>
+               <span class="m-icon1">search</span>
+            </button>
+
+            <a href="#/current-location" data-current-location-btn>
+               <i class="m-icon1 btn-location2" style="color: #1C1D24;">my_location</i>
+               <span>Current Location</span>
+            </a>
+         </div>
+      </div>
+   </header>
+
+   <main>
+      <article class="container-main" data-container>
+         <div class="content-left">
+
+            <!-- current weather section --->
+            <section id="s-current-weather">
+               <div class="container">
+                  <div aria-label="current weather" data-current-weather></div>
+               </div>
+            </section>
+            
+            <!-- forecast section --->
+            <section id="s-forecast">
+               <div class="container">
+                  <div class="container-title-forecast">
+                     <img src="assets/img/girl-sun.svg" alt="Girl with sun">
+                     <h2 id="forecast-label">5 days forecast</h2>
+                  </div>
+
+                  <div class="container-forecast" aria-labelledby="forecast-label" data-5-day-forecast></div>
+               </div>
+            </section>
+         </div>
+
+         <div class="content-right"> 
+
+            <!-- highlights section --->
+            <section id="s-highlights">
+               <div class="container">
+                  <div class="container-highlights" aria-labelledby="highlights-label" data-highlights></div>
+               </div>
+            </section>
+            
+            <!-- hourly forecast section --->
+            <section id="s-hourly-forecast">
+               <div class="container">
+                  <div class="hourly-forecast" aria-label="hourly forecast" data-hourly-forecast></div>
+               </div>
+            </section>
+
+            <!-- <footer class="footer">
+               <div class="container">
+                  <p>
+                     Copyright © 2023 <span>wind.y</span>. Todos os direitos reservados.
+                  </p>
+         
+                  <p>
+                     Powered by
+                     <a href="https://github.com/larisn" target="_blank" rel="noopener">larisn</a>
+                  </p>
+               </div>
+            </footer> -->
+         </div>
+      </article>
+
+      <!-- loading screen --->
+      <div class="loading" data-loading></div>
+   </main>
+
+
+   <!-- error 404 section --->
+   <section id="s-error-content" data-error-content>
+      <div class="container">
+         <div>
+            <img src="assets/img/error404.png" alt="Error 404">
+            <h2>404</h2>
+            <h3>This Page is a Ghost</h3>
+            <p>
+               Once alive and now dead, this ghost appears to have some unfinished business. Could it be with you? Or the treasure hidden under the floorboards of the old mansion in the hills that may never reach its rightful owner, a compassionate school teacher in Brooklyn.
+            </p>
+            
+            <a href="#/weather?lat=-23.5489&lon=-46.6388">
+               <span>Go Home</span>
+            </a>
+         </div>
+      </div>
+   </section>
+
+
+   <script type="module" src="assets/js/app.js"></script>
+   <script type="module" src="assets/js/route.js"></script>
+   <script type="module" src="assets/js/api.js"></script>
+   <script type="module" src="assets/js/module.js"></script>
+</body>
+</html>

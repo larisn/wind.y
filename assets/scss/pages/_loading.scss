@@ -1,0 +1,22 @@
+
+.loading {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-main;
+    place-items: center;
+    z-index: 1;
+    // display: grid;
+    display: none;
+    &::before {
+        content: "";
+        width: 48px;
+        height: 48px;
+        border: 4px solid $color-white1;
+        border-block-start-color: transparent;
+        border-radius: 50%;
+        animation: loading 500ms linear infinite;
+    }
+}

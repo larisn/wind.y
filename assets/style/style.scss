@@ -1,0 +1,114 @@
+@import "../scss/abstracts/variables", 
+"../scss/abstracts/mixins",
+"../scss/abstracts/reset", 
+"../scss/pages/forecast", 
+"../scss/pages/header", 
+"../scss/pages/current-weather", 
+"../scss/pages/hourly-forecast", 
+"../scss/pages/highlights", 
+"../scss/pages/error-404", 
+"../scss/pages/loading"; 
+
+
+// icons
+
+.m-icon1 {
+    font: normal 2.4rem 'Material Symbols Rounded';
+}
+
+.m-icon2 {
+    font: normal 3.2rem 'Material Symbols Rounded';
+    @include responsive-tablet {
+        font-size: 3.6rem;
+    }
+    @include responsive-desktop {
+        font-size: 4.8rem;
+    }
+}
+
+
+body {
+    background-color: $color-main;
+}
+
+main {
+    height: calc(100vh - 80px);
+    height: calc(100svh - 80px); // for mobile browser 
+    overflow: hidden;
+    @include responsive-tablet {
+        height: calc(100vh - 96px);
+        height: calc(100svh - 96px); 
+    }
+    @include responsive-desktop {
+        height: calc(100vh - 120px);
+        height: calc(100svh - 120px); 
+    }
+}
+
+.container-main {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    height: 100%;
+    overflow-y: auto; // for firefox
+    overflow-y: overlay;
+    &::before {
+        content: "";
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        z-index: 1;
+        pointer-events: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    &:is(:hover, :focus-within)::-webkit-scrollbar-thumb {
+        background-color: $bg-secondary;
+    }
+    &::-webkit-scrollbar-button {
+        height: 10px;
+    }
+
+    @include responsive-tablet {
+        padding-block-start: 0px;
+        grid-template-columns: 330px minmax(0px, 1fr);
+        align-items: flex-start;
+        gap: 24px;
+
+        @include responsive-desktop {
+            @include container;
+            grid-template-columns: 400px minmax(0px, 1fr);
+            gap: 40px;
+        }
+    } 
+
+    @include responsive-desktop2 {
+        padding: 0 20px 20px 20px;
+        grid-template-columns: 400px minmax(0, 1fr);
+    }
+}
+
+.content-left {
+    @include responsive-tablet {
+        position: sticky;
+        top: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 250ms ease forwards;
+}
+
+

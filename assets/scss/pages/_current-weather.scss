@@ -1,0 +1,107 @@
+
+#s-current-weather {
+    .container {
+        @include container;
+        @include responsive-tablet {
+            padding-top: 0;
+            padding-right: 0;
+        }
+        @include responsive-desktop {
+            padding-top: 0px;
+        }
+        @include responsive-desktop2 {
+            padding-top: 30px;
+            padding-bottom: 25px;
+        }
+    }
+}
+
+.current-weather-card {
+    background-color: $bg-secondary;
+    border-radius: 28px;
+    padding: 20px;
+    @include responsive-tablet {
+        padding: 24px;
+        width: 100%;
+        margin: 0;
+    }
+    @include responsive-desktop {
+        padding: 36px;
+    }
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1.1;
+        @include responsive-desktop {
+            font-size: 2rem;
+        }
+    }
+    p:nth-child(1) {
+        font-size: 5.6rem;
+        font-weight: 500;
+        span {
+            font-weight: 500;
+            font-size: 5.6rem;
+            @include responsive-desktop {
+                font-size: 8rem;
+            }
+        }
+        sup {
+            position: relative;
+            top: 6px;
+            font-size: 0.75em;
+            @include responsive-desktop {
+                top: 8px;
+                font-size: 6rem;
+            }
+        }
+        @include responsive-desktop {
+            font-size: 8rem;
+        }
+    }
+    div:nth-child(2) {
+        @include align-center;
+        gap: 8px;
+        img {
+            margin-inline: auto;
+            width: 60px;
+            @include responsive-desktop {
+                width: 80px;
+            }
+        }
+    }
+    div:nth-child(3) {
+        p {
+            font: 300 1.6rem 'Nunito Sans';
+            text-transform: capitalize;
+            margin-top: 8px;
+            @include responsive-tablet {
+                margin-top: 0;
+            }
+            @include responsive-desktop {
+                margin-top: 16px;
+            }
+        }
+    }
+    ul {
+        margin-top: 16px;
+        border-block-start: 1px solid #3b3b4e;
+    }
+    li {
+        @include align-center;
+        img {
+            width: 17px;
+            height: 16px;
+        }
+        p {
+            color: $white-dark1-2;
+            font-size: 1.6rem;
+            line-height: 37px;
+            margin-left: 8px;
+            transform: translateY(1px);
+        }
+    }
+    li:nth-child(1) {
+        margin-top: 10px;
+    }
+}

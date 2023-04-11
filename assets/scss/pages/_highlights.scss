@@ -1,0 +1,245 @@
+
+#s-highlights {
+    .container {
+        @include container;
+        h2 {
+            font-weight: 600;
+            font-size: 1.8rem;
+            margin-bottom: 13px;
+            @include responsive-desktop {
+                font-size: 2rem;
+            }
+        }
+        @include responsive-tablet {
+            padding-top: 0;
+            padding-left: 0;
+        }
+        @include responsive-desktop {
+            padding-top: 0px;
+            padding-bottom: 15px;
+        }
+        @include responsive-desktop2 {
+            padding-top: 30px;
+            padding-right: 18px;
+        }
+    }
+}
+
+.container-highlights {
+    background-color: $bg-secondary;
+    padding: 20px;
+    border-radius: 28px;
+    @include responsive-tablet {
+        padding: 24px;
+    }
+    @include responsive-desktop {
+        padding: 36px;
+    }
+}
+
+.highlights-list {
+    display: grid;
+    gap: 20px;
+    @include responsive-tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include responsive-desktop2 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.one {
+    position: relative;
+    div {
+        @include flexbox-between;
+        gap: 16px;
+        ul {
+            @include align-center;    
+            flex-wrap: wrap;
+            flex-grow: 1;
+            row-gap: 8px;
+            li {
+                display: flex;
+                justify-content: flex-end;
+                width: 50%;
+                gap: 4px;
+                p:nth-child(1) {
+                    font: 400 2rem 'Nunito Sans';
+        
+                    @include responsive-tablet {
+                        font-size: 2.4rem;
+                    }
+        
+                    @include responsive-desktop {
+                        font-size: 3.6rem;
+                    }
+                }
+                p:nth-child(2) {
+                    color: $white-dark1-1;
+                    text-align: center;
+                    font: 300 1.4rem 'Nunito Sans';
+                    margin: 3px 0 0 3px;
+        
+                    @include responsive-tablet {
+                        font-size: 1.4rem;
+                    }
+                }
+                span {
+                   font-size: 1.2rem;
+                }
+                @include responsive-tablet {
+                    width: 25%;
+                    flex-direction: column-reverse;
+                    gap: 8px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.two  {
+    div {
+        @include align-center;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        row-gap: 8px;
+        div {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            width: 50%;
+            margin-left: 0;
+        } 
+    }
+}
+
+.card-highlights {
+    background-color: $blue-color7;
+    border-radius: 16px;
+    padding: 16px;
+    @include responsive-tablet {
+        padding: 20px;
+    }
+    @include responsive-desktop {
+        padding: 24px;
+    }
+    h2 {
+        font: 100 1.42rem 'Nunito Sans';
+    }
+    h3 {
+        margin-block-end: 20px;
+        font: 600 1.6rem 'Nunito Sans';
+        color: #7B7980;
+        @include responsive-tablet {
+            margin: 0 0 20px 4px;
+        }
+    }
+    .time {
+        display: block;
+        font-weight: 400;
+        p:nth-child(1) {
+            margin-block-end: 4px;
+            color: $white-dark1-1;
+            font-size: 1.4rem;
+        }
+        p:nth-child(2) {
+            font: 400 2rem 'Nunito Sans';
+            @include responsive-tablet {
+                font-size: 2.4rem;
+            }
+            @include responsive-desktop {
+                font-weight: 500;
+                font-size: 3.6rem;
+            }
+        }
+    }
+
+    @include responsive-tablet {
+        display: grid;
+        grid-template-rows: min-content 1fr;
+        &:nth-child(-n+2) {
+            grid-column: span 2;
+            height: 160px;
+            @include responsive-desktop {
+                height: 200px;
+            }
+        }
+        &:nth-child(n+3) {
+            height: 120px;
+            @include responsive-desktop {
+                height: 150px;
+            }
+        }
+    }
+}
+
+.card-title {
+    div {
+        @include flexbox-between;
+        width: 100%;
+    }
+    p {
+        font: 400 2rem 'Nunito Sans';
+        @include responsive-tablet {
+            font-size: 2.4rem;
+        }
+        @include responsive-desktop {
+            font-size: 3.6rem;
+        }
+    }
+    p {
+        span {
+            font-size: 0.75em;
+        }
+        sup {
+            position: relative;
+            top: 3.5px;
+            font-size: 0.75em;
+            @include responsive-desktop {
+                top: 5px;
+            }
+        }
+    }
+}
+
+.badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 2px 12px;
+    border-radius: 40px;
+    font-size: 1.45rem;
+    font-weight: 600;
+    cursor: help;
+    @include responsive-tablet {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.badge.aqi-1 {
+    background-color: #89E589;
+    color: #1F331F;
+}
+
+.badge.aqi-2 {
+    background-color: #E5DD89;
+    color: #33311F;
+}
+
+.badge.aqi-3 {
+    background-color: #E5C089;
+    color: #332B1F;
+}
+
+.badge.aqi-4 {
+    background-color: #E58989;
+    color: #331F1F;
+}
+
+.badge.aqi-5 {
+    background-color: #E589B7;
+    color: #442c37;
+}
+

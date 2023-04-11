@@ -1,0 +1,55 @@
+
+#s-forecast {
+    .container {
+        @include container;
+        .container-title-forecast {
+            @include align-center;
+            img {
+                margin: 0 8px 8px 15px;
+                width: 95px;
+            }
+        }
+        h2 {
+            font-weight: 600;
+            font-size: 2rem;
+        }
+        @include responsive-tablet {
+            padding-top: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.container-forecast {
+    background-color: $bg-secondary;
+    padding: 18px;
+    border-radius: 28px;
+    @include responsive-tablet {
+        padding: 17px;
+    }
+    @include responsive-desktop {
+        padding: 18px;
+    }
+    li {
+        @include align-center;
+        p {
+            font-size: 1.4rem;
+            color: $white-dark1-1;
+            width: 100%;
+            text-align: right;
+        }
+        div:nth-child(1) {
+            @include align-center;
+            gap: 8px;
+            span {
+                font: 500 1.8rem 'Nunito Sans';
+            }
+            @include responsive-desktop {
+                margin-bottom: 2px;
+            }
+        }
+        &:not(:last-child) {
+            margin-block-end: 12px;
+        }
+    }
+}
