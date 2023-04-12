@@ -23,8 +23,8 @@
 
 ## ⛅️ Sobre
 
-> É um projeto de um aplicativo para ver o clima globalmente e 100% responsivo. É um outro trabalho que será utilizado no meu portfólio, então me esforcei bastante para finalizá-lo. Não foi muito fácil mas o importante é que deu certo e que aprendi coisas novas.<br>
-O app oferece informações detalhadas e atualizadas sobre as condições climáticas das regiões, para que ajude as pessoas a planejarem seu dia com facilidade. Eu utilizei OpenWeather API, na qual me ajudou bastante a entender como é feito uma integração da API nos sites e também conta com a opção de ''ligar'' a localização do usuário.
+> É um projeto de um aplicativo para ver o clima globalmente e que está 100% responsivo. É um outro trabalho que será utilizado no meu portfólio, então me esforcei bastante para finalizá-lo. Não foi muito fácil mas o importante é que deu certo e que aprendi coisas novas.<br>
+O app oferece informações detalhadas e atualizadas sobre as condições climáticas das regiões, para que ajude as pessoas a planejarem seu dia com facilidade e também conta com a opção de ''ligar'' a localização do usuário. Eu utilizei OpenWeather API, na qual me ajudou bastante a entender como é feito a integração de uma API nos sites.
 
 <br>
 
