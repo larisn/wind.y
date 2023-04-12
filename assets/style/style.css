@@ -104,7 +104,7 @@ html {
 }
 @media screen and (min-width: 1400px) {
   #s-forecast .container {
-    max-width: 1600px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 40px;
   }
@@ -188,7 +188,7 @@ header .container {
 }
 @media screen and (min-width: 1400px) {
   header .container {
-    max-width: 1600px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 40px;
   }
@@ -579,7 +579,7 @@ header .container .logo {
 }
 @media screen and (min-width: 1400px) {
   #s-current-weather .container {
-    max-width: 1600px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 40px;
   }
@@ -801,7 +801,7 @@ header .container .logo {
 }
 @media screen and (min-width: 1400px) {
   #s-highlights .container {
-    max-width: 1600px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 40px;
   }
@@ -886,7 +886,7 @@ header .container .logo {
   display: flex;
   justify-content: flex-end;
   width: 50%;
-  gap: 4px;
+  gap: 10px;
 }
 .one div ul li p:nth-child(1) {
   font: 400 2rem "Nunito Sans";
@@ -1198,7 +1198,7 @@ html {
 }
 @media screen and (min-width: 1400px) {
   #s-forecast .container {
-    max-width: 1600px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 40px;
   }
@@ -1282,7 +1282,7 @@ header .container {
 }
 @media screen and (min-width: 1400px) {
   header .container {
-    max-width: 1600px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 40px;
   }
@@ -1673,7 +1673,7 @@ header .container .logo {
 }
 @media screen and (min-width: 1400px) {
   #s-current-weather .container {
-    max-width: 1600px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 40px;
   }
@@ -1895,7 +1895,7 @@ header .container .logo {
 }
 @media screen and (min-width: 1400px) {
   #s-highlights .container {
-    max-width: 1600px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 40px;
   }
@@ -1980,7 +1980,7 @@ header .container .logo {
   display: flex;
   justify-content: flex-end;
   width: 50%;
-  gap: 4px;
+  gap: 10px;
 }
 .one div ul li p:nth-child(1) {
   font: 400 2rem "Nunito Sans";
@@ -2415,7 +2415,7 @@ main {
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) and (min-width: 1400px) {
   .container-main {
-    max-width: 1600px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 40px;
   }

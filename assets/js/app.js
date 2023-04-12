@@ -188,22 +188,22 @@ export const updateWeather = function(lat, lon) {
                      
                      <ul>
                         <li>
-                           <p>${pm2_5.toPrecision(3)}</p>
+                           <p>${pm2_5.toFixed(2)}</p>
                            <p>PM<span>2.5</span></p>
                         </li>
 
                         <li>
-                           <p>${so2.toPrecision(3)}</p>
+                           <p>${so2.toFixed(2)}</p>
                            <p>SO<span>2</span></p>
                         </li>
 
                         <li>
-                           <p>${no2.toPrecision(3)}</p>
+                           <p>${no2.toFixed(2)}</p>
                            <p>NO<span>2</span></p>
                         </li>
 
                         <li>
-                           <p>${o3.toPrecision(3)}</p>
+                           <p>${o3.toFixed(2)}</p>
                            <p>O<span>3</span></p>
                         </li>
                      </ul>

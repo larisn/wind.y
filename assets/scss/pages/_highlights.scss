@@ -54,7 +54,7 @@
         @include flexbox-between;
         gap: 16px;
         ul {
-            @include align-center;    
+            @include align-center;
             flex-wrap: wrap;
             flex-grow: 1;
             row-gap: 8px;
@@ -62,7 +62,7 @@
                 display: flex;
                 justify-content: flex-end;
                 width: 50%;
-                gap: 4px;
+                gap: 10px;
                 p:nth-child(1) {
                     font: 400 2rem 'Nunito Sans';
         
