@@ -33,7 +33,7 @@ O site é possui por 5 partes:
 
 - **Current Weather:** Nessa parte mostra como está o clima atualmente em determinada região.
 - **Forecast:** Mostra a previsão do clima em 5 dias.
-- **Today's Highlights:** Informações detalhadas sobre o dia, como a qualidade do ar, humidade, nascer e pôr do sol, pressão visibilidade e sensação térmica.
+- **Today's Highlights:** Informações detalhadas sobre o dia, como a qualidade do ar, humidade, nascer e pôr do sol, pressão, visibilidade e sensação térmica.
 - **Hourly Forecast:** Apresenta como o clima e a velocidade do vento irão se comportar ao longo do dia.
 - **Error 404:** Também possui uma tela personalizada para caso a página não for encontrada.
 <br>
