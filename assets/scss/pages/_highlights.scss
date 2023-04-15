@@ -115,7 +115,7 @@
 }
 
 .card-highlights {
-    background-color: $blue-color7;
+    background-color: $gray1;
     border-radius: 16px;
     padding: 16px;
     @include responsive-tablet {
@@ -130,7 +130,7 @@
     h3 {
         margin-block-end: 20px;
         font: 600 1.6rem 'Nunito Sans';
-        color: #7B7980;
+        color: $white-dark1-3;
         @include responsive-tablet {
             margin: 0 0 20px 4px;
         }
@@ -219,27 +219,27 @@
 }
 
 .badge.aqi-1 {
-    background-color: #89E589;
-    color: #1F331F;
+    background-color: $green;
+    color: $aqi-text1;
 }
 
 .badge.aqi-2 {
-    background-color: #E5DD89;
-    color: #33311F;
+    background-color: $yellow1;
+    color: $aqi-text2;
 }
 
 .badge.aqi-3 {
-    background-color: #E5C089;
-    color: #332B1F;
+    background-color: $yellow2;
+    color: $aqi-text3;
 }
 
 .badge.aqi-4 {
-    background-color: #E58989;
-    color: #331F1F;
+    background-color: $salmon1;
+    color: $aqi-text4;
 }
 
 .badge.aqi-5 {
-    background-color: #E589B7;
-    color: #442c37;
+    background-color: $pink1;
+    color: $aqi-text5;
 }
 

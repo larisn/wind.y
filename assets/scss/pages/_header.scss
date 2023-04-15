@@ -33,7 +33,7 @@ header {
 .arrow-close {
     &:hover {
         &::before {
-            background-color: #6e728c18;
+            background-color: $purple2;
         }
     }
     &:is(:focus, :focus-visible) {
@@ -92,7 +92,7 @@ header {
     }
     a {
         @include align-center;
-        background-color: #a09fe7;
+        background-color: $purple4;
         height: 46px;
         line-height: 48px;
         max-width: max-content;
@@ -100,11 +100,11 @@ header {
         border-radius: 30px;
         transform: translateY(-2px);
         &:hover {
-            background-color: #8d8ccd;
+            background-color: $purple3;
         }
         &[disabled] {
-            background-color: #3E3D40;
-            color: #7B7980;
+            background-color: $white-dark1-4;
+            color: $white-dark1-3;
             cursor: not-allowed;
             &::before {
                 display: none;
@@ -122,7 +122,7 @@ header {
             }
         }  
         @include responsive-tablet {
-            background-color: #a09fe7;
+            background-color: $purple4;
             padding: 20px;
         }
         @include responsive-desktop {
@@ -131,9 +131,9 @@ header {
         }
         @include responsive-tablet {
             &:hover {
-                background-color: #8d8ccd;
+                background-color: $purple3;
                 &[disabled] {
-                    background-color: #3E3D40;
+                    background-color: $white-dark1-4;
                 }
             }
         }
@@ -196,7 +196,7 @@ header {
             }
         }
         position: relative;
-        border-block-end: 1px solid #f0f0f03b;
+        border-block-end: 1px solid $color-white1-2;
         @include responsive-desktop {
             border-block-end: none;
         }
@@ -208,7 +208,7 @@ header {
             right: 16px;
             width: 24px;
             height: 24px;
-            border: 3px solid $blue-color4;
+            border: 3px solid $purple1;
             border-block-start-color: transparent;
             border-radius: 50%;
             animation: loading 600ms linear infinite;
@@ -250,7 +250,7 @@ header {
             width: 100%;
             max-height: 360px;
             border-radius: 0 0 30px 30px;
-            border-block-start: 1px solid #f0f0f03b;
+            border-block-start: 1px solid $color-white1-4;
             overflow-y: auto; // for firefox
             overflow-y: overlay;
             &:empty {
@@ -283,7 +283,7 @@ header {
             cursor: pointer;
         }
         &:hover {
-            background-color: #6e728c18;
+            background-color: $purple2;
         }
     }
     .search-result, &:not(:focus-within) .search-result {

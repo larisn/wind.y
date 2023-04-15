@@ -84,14 +84,14 @@
                 }
             }
             span {
-                background-color: #a09fe7;
+                background-color: $purple4;
                 font-size: 1.6rem;
                 font-weight: 600;
                 color: $color-main;
                 padding: 8px 12px 8px 12px;
                 border-radius: 50px;
                 &:hover {
-                    background-color: #8d8ccd;
+                    background-color: $purple3;
                 }
                 @include responsive-small-phone {
                     position: relative;

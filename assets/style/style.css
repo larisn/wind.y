@@ -304,7 +304,7 @@ header .container .logo {
 }
 .header-actions a[disabled] {
   background-color: #3E3D40;
-  color: #7B7980;
+  color: #7b7980;
   cursor: not-allowed;
 }
 .header-actions a[disabled]::before {
@@ -400,8 +400,8 @@ header .container .logo {
 }
 .search-view div:nth-child(1) {
   position: relative;
-  -webkit-border-after: 1px solid rgba(240, 240, 240, 0.231372549);
-          border-block-end: 1px solid rgba(240, 240, 240, 0.231372549);
+  -webkit-border-after: 1px solid rgba(240, 240, 240, 0.2392156863);
+          border-block-end: 1px solid rgba(240, 240, 240, 0.2392156863);
 }
 .search-view div:nth-child(1) span:nth-child(2) {
   display: none;
@@ -961,7 +961,7 @@ header .container .logo {
   -webkit-margin-after: 20px;
           margin-block-end: 20px;
   font: 600 1.6rem "Nunito Sans";
-  color: #7B7980;
+  color: #7b7980;
 }
 @media screen and (min-width: 768px) {
   .card-highlights h3 {
@@ -1398,7 +1398,7 @@ header .container .logo {
 }
 .header-actions a[disabled] {
   background-color: #3E3D40;
-  color: #7B7980;
+  color: #7b7980;
   cursor: not-allowed;
 }
 .header-actions a[disabled]::before {
@@ -1494,8 +1494,8 @@ header .container .logo {
 }
 .search-view div:nth-child(1) {
   position: relative;
-  -webkit-border-after: 1px solid rgba(240, 240, 240, 0.231372549);
-          border-block-end: 1px solid rgba(240, 240, 240, 0.231372549);
+  -webkit-border-after: 1px solid rgba(240, 240, 240, 0.2392156863);
+          border-block-end: 1px solid rgba(240, 240, 240, 0.2392156863);
 }
 .search-view div:nth-child(1) span:nth-child(2) {
   display: none;
@@ -2055,7 +2055,7 @@ header .container .logo {
   -webkit-margin-after: 20px;
           margin-block-end: 20px;
   font: 600 1.6rem "Nunito Sans";
-  color: #7B7980;
+  color: #7b7980;
 }
 @media screen and (min-width: 768px) {
   .card-highlights h3 {
