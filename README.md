@@ -29,7 +29,7 @@ O app oferece informações detalhadas e atualizadas sobre as condições climá
 <br>
 
 ## 🌨 Seções
-O site é possui cinco partes:
+O site possui cinco partes:
 
 - **Current Weather:** Nessa parte mostra como está o clima atualmente em determinada região.
 - **Forecast:** Mostra a previsão do clima em 5 dias.
